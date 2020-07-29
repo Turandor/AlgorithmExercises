@@ -1,5 +1,8 @@
 using AlgorithmExercises;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
+using System.Linq;
+using System.Resources;
 
 namespace AlgoritgmExercisesTests
 {
@@ -178,6 +181,58 @@ namespace AlgoritgmExercisesTests
             Assert.IsTrue(Algorithms.Fifteenth(30, 30, 17), "Expresions returns false");
             Assert.IsTrue(Algorithms.Fifteenth(25, 35, 50), "Expresions returns false");
             Assert.IsFalse(Algorithms.Fifteenth(15, 12, 8), "Expresions returns true");
+        }
+
+        [TestMethod]
+        public void HundredFortySeventh()
+        {
+            List<string> str = new List<string>();
+            str.Add("Abc");
+            str.Add("cdef");
+            str.Add("js");
+            str.Add("php");
+
+            List<string> answear = new List<string>();
+            answear.Add("ABC");
+            answear.Add("CDEF");
+            answear.Add("JS");
+            answear.Add("PHP");
+
+            Assert.IsTrue(Algorithms.HundredFortySeventh(str).SequenceEqual(answear),
+                "Expresions returns false");
+        }
+
+        [TestMethod]
+        public void HundredFortyEighth()
+        {
+            List<string> str = new List<string>();
+            str.Add("abc");
+            str.Add("cdaef");
+            str.Add("js");
+            str.Add("php");
+
+            List<string> answear = new List<string>();
+            answear.Add("bc");
+            answear.Add("cdef");
+            answear.Add("js");
+            answear.Add("php");
+
+            Assert.IsTrue(Algorithms.HundredFortyEighth(str).SequenceEqual(answear),
+                "Expresions returns false");
+        }
+
+        [TestMethod]
+        public void HundredFifth()
+        {
+            int[] tmp = { 10, 22, 35, 47, 53, 67 };
+            List<int> answear = new List<int>();
+            answear.Add(10);
+            answear.Add(22);
+            answear.Add(35);
+            answear.Add(53);
+
+            Assert.IsTrue(Algorithms.HundredFifth(tmp).SequenceEqual(answear),
+                "Expresions returns false");
         }
     }
 }

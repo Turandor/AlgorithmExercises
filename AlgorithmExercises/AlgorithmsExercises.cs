@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 
 namespace AlgorithmExercises
@@ -223,8 +224,49 @@ namespace AlgorithmExercises
                 (c >= 20 && c <= 50))
                 return true;
             else
-
                 return false;
+        }
+
+        /* 147.
+         * Write a C# Sharp program to create a new list from a given list
+         * of strings where strings will be in upper case in new string.
+         */
+        public static List<string> HundredFortySeventh(List<string> str)
+        {
+            for (int i = 0; i < str.Count; i++)
+            {
+                str[i] = str[i].ToUpper();
+            }
+            return str;
+        }
+
+        /* 148.
+         * Write a C# Sharp program to remove all "a" in each string in
+         * given list of strings and return the new string.
+         */
+        public static List<string> HundredFortyEighth(List<string> str)
+        {
+            for (int i = 0; i < str.Count; i++)
+            {
+                str[i] = str[i].Replace("a", "");
+            }
+            return str;
+        }
+
+        /* 150.
+         * Write a C# Sharp program to create a new list from a given list
+         * of integers removing those values end with 7.
+         */
+        public static List<int> HundredFifth(int[] a)
+        {
+            List<int> tmp = new List<int>();
+            
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (a[i] % 10 != 7)
+                    tmp.Add(a[i]);
+            }
+            return tmp;
         }
     }
 }
