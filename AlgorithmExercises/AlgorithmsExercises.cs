@@ -223,6 +223,7 @@ namespace AlgorithmExercises
                 (c >= 20 && c <= 50))
                 return true;
             else
+
                 return false;
         }
     }
