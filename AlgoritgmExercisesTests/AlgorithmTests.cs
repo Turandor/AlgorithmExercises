@@ -126,5 +126,58 @@ namespace AlgoritgmExercisesTests
             Assert.IsTrue(Algorithms.Tenth(tmp3), "expression returns false");
             Assert.IsFalse(Algorithms.Tenth(tmp4), "expression returns true");
         }
+
+        [TestMethod]
+        public void Eleventh()
+        {
+            string str1 = "Python";
+            string str2 = "JS";
+            string str3 = "Code";
+
+            Assert.AreEqual(Algorithms.Eleventh(str1), "PytPythonPyt", "Expresions are not equal");
+            Assert.AreEqual(Algorithms.Eleventh(str2), "JSJSJS", "Expresions are not equal");
+            Assert.AreEqual(Algorithms.Eleventh(str3), "CodCodeCod", "Expresions are not equal");
+        }
+
+        [TestMethod]
+        public void Twelfth()
+        {
+            string str1 = "C# Sharp";
+            string str2 = "C#";
+            string str3 = "C++";
+
+            Assert.IsTrue(Algorithms.Twelfth(str1), "Expresions returns false");
+            Assert.IsTrue(Algorithms.Twelfth(str2), "Expresions returns false");
+            Assert.IsFalse(Algorithms.Twelfth(str3), "Expresions returns true");
+        }
+
+        [TestMethod]
+        public void Thirteenth()
+        {
+            int tmp1 = 120;
+            int tmp2 = -1;
+            int tmp3 = 2;
+
+            Assert.IsTrue(Algorithms.Thirteenth(tmp1, tmp2), "Expresions returns false");
+            Assert.IsTrue(Algorithms.Thirteenth(tmp2, tmp1), "Expresions returns false");
+            Assert.IsFalse(Algorithms.Thirteenth(tmp3, tmp1), "Expresions returns true");
+        }
+
+        [TestMethod]
+        public void Fourteenth()
+        {
+            Assert.IsTrue(Algorithms.Fourteenth(100, 199), "Expresions returns false");
+            Assert.IsFalse(Algorithms.Fourteenth(250, 300), "Expresions returns true");
+            Assert.IsTrue(Algorithms.Fourteenth(105, 190), "Expresions returns false");
+        }
+
+        [TestMethod]
+        public void Fifteenth()
+        {
+            Assert.IsTrue(Algorithms.Fifteenth(11, 20, 12), "Expresions returns false");
+            Assert.IsTrue(Algorithms.Fifteenth(30, 30, 17), "Expresions returns false");
+            Assert.IsTrue(Algorithms.Fifteenth(25, 35, 50), "Expresions returns false");
+            Assert.IsFalse(Algorithms.Fifteenth(15, 12, 8), "Expresions returns true");
+        }
     }
 }

@@ -153,5 +153,77 @@ namespace AlgorithmExercises
             else
                 return false;
         }
+
+        /* 11. 
+         * Write a C# Sharp program to create a new string taking
+         * the first 3 characters of a given string and return the string
+         * with the 3 characters added at both the front and back.
+         * If the given string length is less than 3, use whatever characters are there.
+         */
+        public static string Eleventh(string str)
+        {
+            string tmp;
+
+            if (str.Length > 0)
+            {
+                if (str.Length < 3)
+                    tmp = str.Substring(0, str.Length);
+                else
+                    tmp = str.Substring(0, 3);
+                return tmp + str + tmp;
+            }
+            return str;
+        }
+
+        /* 12. 
+         * Write a C# Sharp program to check if a given string starts with 'C#' or not.
+         */
+        public static bool Twelfth(string str)
+        {
+            if (str.StartsWith("C#"))
+                return true;
+            else
+                return false;
+        }
+
+        /* 13.
+         * Write a C# Sharp program to check if one given temperatures is less than 0
+         * and the other is greater than 100.
+         */
+        public static bool Thirteenth(int a, int b)
+        {
+            if ((a < 0 && b > 100) || (b < 0 && a > 100))
+                return true;
+            else
+                return false;
+        }
+
+        /* 14.
+         * Write a C# Sharp program to check two given integers whether
+         * either of them is in the range 100..200 inclusive.
+         */
+        public static bool Fourteenth(int a, int b)
+        {
+            if (a >= 100 && b >= 100 &&
+                a <= 200 && b <= 200)
+                return true;
+            else
+                return false;
+        }
+
+        /* 15.
+         * Write a C# Sharp program to check whether three given integer values
+         * are in the range 20..50 inclusive. Return true if 1 or more of them
+         * are in the said range otherwise false.
+         */
+        public static bool Fifteenth(int a, int b, int c)
+        {
+            if ((a >= 20 && a <= 50) ||
+                (b >= 20 && b <= 50) ||
+                (c >= 20 && c <= 50))
+                return true;
+            else
+                return false;
+        }
     }
 }
